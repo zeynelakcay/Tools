@@ -4,7 +4,7 @@ echo "*************KITAPYURDU*************"
 echo "Developed by Zeynel Akçay and Hasim Yerli"
 echo "Çalışma Dizininizde Scripti Çalıştırın. Örn:Desktop"
 echo "*************************************"
-read -p 'Clone Web Url:' clone_web_url
+read -p 'Master Repo Url:' master_repo_url
 
 dir_issues="issues"
 if [[ ! -d $dir_issues ]]; then
@@ -27,7 +27,7 @@ fi
 cd $dir_issue_no
 echo "$dir_issue_no dizininin içine girildi"
 
-git clone $clone_web_url
+git clone $master_repo_url
 
 cd symfony-b2b
 
