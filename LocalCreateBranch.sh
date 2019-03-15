@@ -38,5 +38,9 @@ git checkout development
 git checkout -b $dir_issue_no 
 
 
+echo "Composer Install Çalıştırıldı"
+
+composer install
+
 echo 'Bol Kodlu Günler...'
 read -p 'Çıkış İçin ENTER: '
