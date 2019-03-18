@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "*************KITAPYURDU*************"
+echo "********************************************"
 echo "Developed by Zeynel Akçay and Hasim Yerli"
 echo "Çalışma Dizininizde Scripti Çalıştırın. Örn:Desktop"
 echo "*************************************"
@@ -37,10 +37,18 @@ git checkout development
 
 git checkout -b $dir_issue_no 
 
+ echo "Composer Install Çalıştırılsın mı ? (Yes/No)\n"  
+   
+ read var
+ 
+ if [ "$var" == "Y" ] || [ "$var" == "y" ] || [ "$var" == "yes" ] || [ "$var" == "Yes" ];  
+   then  
+    composer install 
+    echo "\n\n******Composer Install Çalıştırıldı*******"
+   else  
+    echo "\n\n!!!!!!Composer Install Çalıştırılmadı!!!!!"
+ fi
 
-echo "Composer Install Çalıştırıldı"
-
-composer install
 
 echo 'Bol Kodlu Günler...'
 read -p 'Çıkış İçin ENTER: '
